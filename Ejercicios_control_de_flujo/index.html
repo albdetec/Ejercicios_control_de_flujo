@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Tema 4-3</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/calculos.js" defer></script>
+    <script src="js/tobogan.js" defer></script>
+    <script src="js/tresNum.js" defer></script>
+    <script src="js/pino.js" defer></script>
+    <script src="js/piedraPapelTijera.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+
+            <!--OPERACIONES CON NÚMEROS-->
+
+            <div class="general-section">
+                <h1 class="title">Operaciones con números</h1>
+                <div class="divInput">
+                    <label for="numero1">Número 1</label>
+                    <input id="num1" type="number" name="numero1" required>
+                </div>
+                <div class="divInput">
+                    <label for="numero2">Número 2</label>
+                    <input id="num2" type="number" name="numero2" required>
+                </div>
+                <div class="divInput">
+                    <label for="resultado">Resultado</label>
+                    <input id="resultado" type="number" name="resultado" readonly>
+                </div>
+                <div>
+                    <button id="button" type="button" onclick="calculos()"></button>
+                </div>
+            </div>
+
+            <!--TOBOGAN-->
+
+            <div class="general-section">
+                <h1 class="title">Tobogán</h1>
+                <div>
+                    <button id="button" type="button" onclick="tobogan()">¿Quiéres jugar?</button>
+                </div>
+            </div>
+
+            <!--TRES NÚMEROS-->
+
+            <div class="general-section">
+
+                <h1 class="title">Tres números</h1>
+
+                <div class="divLitleInput">
+                    <input id="num11" type="number" name="num11" required>
+                    <input id="num12" type="number" name="num12" required>
+                    <input id="num13" type="number" name="num13" required>
+                </div>
+                <div class="tres-button">
+                    <button id="button" type="button" onclick="tresNum(1)">Calculo 1</button>
+                </div>
+                <div class="tres-button">
+                    <button id="button" type="button" onclick="tresNum(2)">Calculo 2</button>
+                </div>
+                <div class="divInput">
+                    <div>
+                        <p class="tres-txt">Resultado</p>
+                    </div>
+
+                    <div id="tres-txt" class="tres-txt"></div>
+                </div>
+            </div>
+
+            <!--PINO-->
+
+            <div class="general-section">
+                <h1 class="title">Pino</h1>
+                <div class="divLitleInput">
+                    <input id="pinoTxt" type="text" name="pinoTxt" required>
+                    <input id="pinoNum" type="number" name="pinoNum" required>
+                </div>
+                <div class="pino-button">
+                    <button id="button" type="button" onclick="pino()">Pintar pino</button>
+                </div>
+                <div id="pino" class="pino"></div>
+            </div>
+
+            <!--CALCULADORA-->
+
+            <div class="general-section">
+                <h1 class="title">Calculadora</h1>
+                <h2 class="subtitle">Introducir dos números</h2>
+
+                <div class="divLitleInput">
+                    <input id="calc-first-num" type="number" name="number1" required>
+                    <input id="calc-second-num" type="number" name="number2" required>
+                </div>
+
+                <div class="calc-img">
+                    <img src="images/suma.png" onclick="calculadora('suma', '+')" alt="suma">
+                </div>
+                <div class="calc-img">
+                    <img src="images/resta.png" onclick="calculadora('resta', '-')" alt="resta">
+                </div>
+                <div class="calc-img">
+                    <img src="images/multiplicacion.png" onclick="calculadora('multiplicacion', 'x')"
+                        alt="multiplicacion">
+                </div>
+                <div class="calc-img">
+                    <img src="images/division.png" onclick="calculadora('division', '/')" alt="division">
+                </div>
+                <div class="calc-img">
+                    <img src="images/potencia.png" onclick="calculadora('potencia', 'p')" alt="potencia">
+                </div>
+                <div class="calc-img">
+                    <img src="images/raiz.png" onclick="calculadora('raiz', '&#8730')" alt="raiz">
+                </div>
+                <div class="calc-button">
+                    <button id="button" type="button" onclick="calculadora('salir')">Salir</button>
+                </div>
+
+                <div class="divInput">
+                    <div><label for="resultado">Resultado</label></div>
+                    <div><input id="calc-result" type="number" name="resultado" readonly></div>
+                </div>
+                <div id="calc-txt" class="calc-txt"></div>
+            </div>
+
+            <div class="general-section">
+                <h1 class="title">Piedra Papel Tijera</h1>
+
+                <div class="piedra-img" id="piedra-img">
+                    <img id="piedra" src="images/piedra.png" onclick="piedraPapelTijera('piedra')" alt="piedra">
+                    <img id="papel" src="images/papel.png" onclick="piedraPapelTijera('papel')" alt="papel">
+                    <img id="tijera" src="images/tijera.png" onclick="piedraPapelTijera('tijera')" alt="tijera">
+                </div>
+
+                <div class="divLitleInput">
+                    <input id="img-selected" type="text" name="piedra" readonly>
+                </div>
+                <div id="resolution-txt" class="resolution-txt"></div>
+                <div class="divLitleInput">
+                    <input id="img-random" type="text" name="piedra" readonly>
+                </div>
+
+                <div class="piedra-img" id="piedra-img">
+                    <img id="piedra-random" src="images/piedra.png"  alt="piedra">
+                    <img id="papel-random" src="images/papel.png"  alt="papel">
+                    <img id="tijera-random" src="images/tijera.png"  alt="tijera">
+                </div>
+
+            </div>
+
+        </div>
+</body>
+
+</html>
